@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinalOption" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c6i-uK-HoT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button verifyAmbiguity="ignoreSizes" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-wX-lhP">
+                                <rect key="frame" x="224" y="457" width="120" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yuN-nv-Wo4"/>
+                                </connections>
+                            </button>
+                            <button verifyAmbiguity="ignoreSizes" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czh-Rb-jQa">
+                                <rect key="frame" x="50" y="457" width="120" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPz-LH-Tpl"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-S1-6FM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Time me" id="RS9-X7-nMo" userLabel="Time me ">
+                                        <barButtonItem key="rightBarButtonItem" title="Reset" id="hLa-lb-1WU">
+                                            <connections>
+                                                <action selector="resetTime:" destination="BYZ-38-t0r" id="KrR-4K-oxr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer reader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-kL-loI">
+                                <rect key="frame" x="53.5" y="303.5" width="268" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField verifyAmbiguity="ignoreSizes" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="miE-Ek-NNl">
+                                <rect key="frame" x="131" y="215" width="113.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setTimer:" destination="BYZ-38-t0r" eventType="editingChanged" id="j1d-3j-mng"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="miE-Ek-NNl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="85X-L5-mnm"/>
+                            <constraint firstItem="czh-Rb-jQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8sM-qQ-4BN"/>
+                            <constraint firstItem="oqG-kL-loI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PTa-MR-ATZ"/>
+                            <constraint firstItem="v4E-wX-lhP" firstAttribute="leading" secondItem="czh-Rb-jQa" secondAttribute="trailing" constant="50" id="UHn-6u-rcf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="czh-Rb-jQa" secondAttribute="bottom" constant="150" id="gWA-b6-aS9"/>
+                            <constraint firstItem="oqG-kL-loI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaz-Vh-xFA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4E-wX-lhP" secondAttribute="trailing" constant="50" id="jGb-8q-hNQ"/>
+                            <constraint firstItem="oqG-kL-loI" firstAttribute="top" secondItem="miE-Ek-NNl" secondAttribute="bottom" constant="58.5" id="tF0-ud-pmP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v4E-wX-lhP" secondAttribute="bottom" constant="150" id="tTx-1R-szX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="c6i-uK-HoT" id="Eyp-V8-mty"/>
+                        <outlet property="pause" destination="czh-Rb-jQa" id="ptP-zB-9rU"/>
+                        <outlet property="reset" destination="hLa-lb-1WU" id="fZm-Pw-O36"/>
+                        <outlet property="start" destination="v4E-wX-lhP" id="XCA-v3-Lbp"/>
+                        <outlet property="timeLabel" destination="oqG-kL-loI" id="XC9-qb-Tkc"/>
+                        <outlet property="timeSetter" destination="miE-Ek-NNl" id="NtF-mS-Dmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image3.jpg" width="4000" height="6000"/>
+    </resources>
+</document>
